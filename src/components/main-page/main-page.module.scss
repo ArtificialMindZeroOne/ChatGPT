@@ -105,6 +105,14 @@
   gap: 10px;
 }
 
+@media screen and (max-width: 1024px),
+screen and (max-width: 1024px) {
+  .chatGPT_block__input_raw {
+    width: 90%;
+    margin-top: -10px;
+  } 
+}
+
 .chatGPT_block__input {
   width: calc(100% - 60px);
   background-color: rgb(246, 247, 248);
