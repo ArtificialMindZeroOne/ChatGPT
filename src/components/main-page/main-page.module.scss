@@ -1,5 +1,5 @@
 .main_page {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(21deg, #ea38f0, #5007ec);
   color: black;
@@ -41,7 +41,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 1024px), screen and (max-height: 576px) {
+@media screen and (max-width: 1024px), screen and (max-height: 933px) {
   .main_page_block__chat {
     font-size: 10px;
   }
@@ -106,7 +106,7 @@
 }
 
 @media screen and (max-width: 1024px),
-screen and (max-width: 1024px) {
+screen and (max-height: 933px) {
   .chatGPT_block__input_raw {
     width: 90%;
     margin-top: -10px;
