@@ -1,0 +1,193 @@
+.main_page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(21deg, #ea38f0, #5007ec);
+  color: black;
+  //   opacity: 0;
+  //   /*Элемент полностью прозрачный (невидимый)*/
+  //   transition: 0.3s;
+  //   /*Скорость перехода состояния элемента*/
+  //   animation: show 0.3s 1;
+  //   /* Указываем название анимации, её время и количество повторов*/
+  //   animation-fill-mode: forwards;
+  //   /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+
+.main_page__header {
+  height: 56px;
+  padding: 10px 15px;
+  background-color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  background-image: url("../../assets/backHeader.PNG");
+  -webkit-box-shadow: -2px -23px 8px -9px rgba(153, 34, 236, 0.2) inset;
+  -moz-box-shadow: -2px -23px 8px -9px rgba(153, 34, 236, 0.2) inset;
+  box-shadow: -2px -23px 8px -9px rgba(153, 34, 236, 0.2) inset;
+}
+
+.main_page_block__chat {
+  padding: 10px 0;
+  width: 50%;
+  height: calc(100vh - 218px);
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 576px) {
+  .main_page_block__chat {
+    font-size: 10px;
+  }
+}
+
+.chatGPT_block__chat_indicator {
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.userMessage {
+  text-align: right;
+  background-color: rgb(66, 138, 248);
+  width: fit-content;
+  margin-left: auto;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  max-width: 80%;
+  opacity: 0;
+  /*Элемент полностью прозрачный (невидимый)*/
+  transition: 0.3s;
+  /*Скорость перехода состояния элемента*/
+  animation: show 0.3s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+
+.chatGPTMessage {
+  text-align: left;
+  background-color: rgb(238, 241, 245);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 80%;
+  opacity: 0;
+  /*Элемент полностью прозрачный (невидимый)*/
+  transition: 0.3s;
+  /*Скорость перехода состояния элемента*/
+  animation: show 0.3s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+
+.chatGPT_block__input_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.chatGPT_block__input_raw {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chatGPT_block__input {
+  width: calc(100% - 60px);
+  background-color: rgb(246, 247, 248);
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.chatGPT_block__input:focus {
+  outline: none;
+}
+
+.sendMsgBtn {
+  height: 35px;
+  width: 50px;
+  background-color: rgb(66, 139, 249);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sendMsgBtn:hover {
+  background-color: rgb(63, 131, 235);
+}
+
+.sendMsgBtn:active {
+  background-color: rgb(41, 109, 210);
+}
+
+.chatGPT_block__chat_icon {
+  height: 30px;
+}
+
+.chatGPT_block__chat_element {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.icon-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingGPTAnswer {
+  opacity: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: rgb(97, 13, 237);
+  width: 50%;
+}
+
+.hiddenLoadingGPTAnswer {
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: rgb(97, 13, 237);
+  width: 50%;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
